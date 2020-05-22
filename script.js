@@ -22,7 +22,6 @@ function triangle_aa() {
     }
 }
 
-//  4.2 Фибоначчи
 function ress() {
     let a = 1
     let b = 100
@@ -34,8 +33,6 @@ function ress() {
     }
     window.alert("Ответ - " + res);
 }
-
-// 4.3 Массивы
 
 let matrice = new Array(3);
 let com1 = 0
@@ -68,7 +65,6 @@ function mas_change() {
   }
 }
 
-// 4.4 Функции
 
 function GetRandomInt(max, min) {
     return Math.floor(min + Math.random() * (max + 1 - min));
@@ -86,10 +82,14 @@ function getResultArray(a, b) {
     return a.sort((a, b) => a - b)
 }
 
-//  Квадратная матрица
 
 let table = document.querySelector('#table');
-let arr = [9, 8, 7, 6, 5, 4, 3, 2, 1]; /* n = 3 */
+let arr = [];
+for(let i = 0; i < 9; i++){
+  arr.push(GetRandomInt(20,1));
+}
+arr.sort();
+console.log(arr);
 arr = getResultArray(arr);
 fillTable(table, arr);
 
